@@ -1,0 +1,25 @@
+import {
+  Coffee,
+  Menu,
+  X,
+  Clock,
+  Instagram,
+  Users,
+  Star,
+  Phone,
+} from "lucide-react";
+import { useState } from "react";
+
+export default function HomePage() {
+  const [email, setEmail] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleEmailSubmit = (e) => {
+    e.preventDefault();
+    console.log("Email submitted:", email);
+    setEmail("");
+    alert("Thanks for joining our coffee community! ☕");
+  };
+
+  const menuItems = [
+    { name: "Stress Buster Latte", description: "Perfect for exam season"
